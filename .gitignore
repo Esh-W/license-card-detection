@@ -1,20 +1,40 @@
+# Python
 __pycache__/
 *.py[cod]
 *.egg-info/
 .venv/
 venv/
-env/
 .env
 
-data/*
+# Jupyter
+.ipynb_checkpoints/
 
-# Generated experiment artefacts
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Personal data: licence images must never be committed
+data/*
+!data/**/
+!data/**/.gitkeep
 outputs/*
 !outputs/.gitkeep
 
-# Local and notebook tooling
-.ipynb_checkpoints/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
+# Ignore all images everywhere...
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
 
+# ...except redacted/mock demo images
+!samples/*.jpg
+!samples/*.jpeg
+!samples/*.png
+
+# Models and caches
+.easyocr/
+*.pt
+*.pth
